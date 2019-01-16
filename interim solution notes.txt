@@ -1,0 +1,54 @@
+
+guid:        PAP  (publishes to PAS's i/p q)
+        --rabbitmq--
+root:        PAS* (reads from its i/p q, publishes to APP's i/p q, then reads from APP's o/p q)
+        --rabbitmq--
+netauto:     APP* (reads from its i/p q, publishes to its o/p q)
+
+*these 2 are services
+
+PAP: Policy Applier Program
+PAS: Policy Applier Service
+APP: Applier Service
+------------------------------------
+*How to ensure FiRMS's firewalls credentials are not accessible by NetOps engineers?*
+
+- NetOps engineer logs into the FiRMS server in NOOB,
+ executes from the CLI first the Policy Builder Program,
+ and subsequently the Policy Applier Program (PAP). Both executions happen as the logged-in GUID user,
+ with both programs having 750 (netauto:firmsusers) permissions,
+  where netauto is a service account and firmsusers in a group to which engineers are added
+  when they subscribe to an OIM entitlement (i.e., the current process approved by CSSAP).
+
+- PAP internally makes a network call to submit a request to the Policy Applier Service (PAS).
+ PAS runs on that same FiRMS server, but as the netauto service account
+ (as opposed to PAP running as a GUID-owned process).
+ PAS has 700 permission (netauto:netauto; netauto is also a group).
+
+- PAS has access to the firewalls credentials (which are stored in a file with 600 permission; netauto:netauto),
+ and creates new policies on firewalls based on the request made by PAP.
+ PAS sends a response to PAP with the results.
+
+- IPTables on the FiRMS server impose rules so that incoming traffic to the port
+ PAS is listening on is accepted _only_ from localhost.
+
+
+steps
+-----
+1.builder will run and create policies with unique corid
+2.translation of builders json to applier's json
+3.publish the message to rabbitmq
+4.consume that message and check if same ticket has been executed already or not
+5.if not:
+    1.send the message to the applier input channel
+	2.Applier will consume the message and apply the policies
+	3.send the result to applier output channel
+6.consume from the applier output chanel
+7.store it in the local store (ticket number,who,when,status)
+8.notify the user
+
+questions:
+----------
+1.How to respond to user at anytime about the status of the ticket
+   (before we notify him at step 8) more importantly how he/she will query it.
+

@@ -1,0 +1,1808 @@
+{
+  "ch3-opc-fw-1":{
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.47.208.0\/23":"set security address-book global address us2-chicago-colo-opc-v140-10.47.208.0\/23 10.47.208.0\/23\/32 \n",
+      "us2-chicago-colo-opc-v141-10.200.10.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.200.10.0\/24 10.200.10.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v341-10.35.38.64\/27":"set security address-book global address us2-chicago-colo-opc-v341-10.35.38.64\/27 10.35.38.64\/27\/32 \n",
+      "us2-chicago-colo-opc-v141-10.35.58.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.35.58.0\/24 10.35.58.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.46.223.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.46.223.160\/29 10.46.223.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v102-10.47.222.0\/27":"set security address-book global address us2-chicago-colo-opc-v102-10.47.222.0\/27 10.47.222.0\/27\/32 \n",
+      "us2-chicago-colo-opc-v141-10.35.34.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.35.34.0\/24 10.35.34.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.12.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.12.0\/24 10.72.12.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-35.70.128\/27":"set security address-book global address us2-chicago-colo-opc-v142-35.70.128\/27 35.70.128\/27\/32 \n",
+      "us2-chicago-colo-opc-v142-10.35.68.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.68.0\/24 10.35.68.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.35.63.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.35.63.144\/29 10.35.63.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v341-10.35.62.64\/27":"set security address-book global address us2-chicago-colo-opc-v341-10.35.62.64\/27 10.35.62.64\/27\/32 \n"
+    },
+    "1":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_1 match application tcp_1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_1 match application tcp_6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_1 match destination-address us2-chicago-colo-opc-v140-10.47.208.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_1 match source-address us2-chicago-colo-opc-v102-10.46.223.160\/29"
+      ],
+      "row_num":[
+        38
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_1 then permit"
+      ]
+    },
+    "2":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application 7001-oim",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application 7777-tcp",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application junos-ssh",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application tcp-5556",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application tcp-7004",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application tcp_1600-1630",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application tcp_9001",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match application tcp_9420"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match destination-address 10.35.68.0\/23_10.35.68.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 match source-address us2-chicago-colo-opc-v140_10.34.219.0\/24"
+      ],
+      "row_num":[
+        1,
+        10,
+        11
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_2 then permit"
+      ]
+    },
+    "3":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_3 match application 7777-tcp",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_3 match application tcp_1600-1630"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_3 match destination-address us2-chicago-colo-opc-v141-10.200.10.0\/23",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_3 match destination-address us2-chicago-colo-opc-v141-10.200.10.0\/24",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_3 match destination-address us2-chicago-colo-opc-v142-10.35.68.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_3 match source-address us2-chicago-colo-opc-v140_10.34.219.0\/24"
+      ],
+      "row_num":[
+        7,
+        8,
+        9
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_3 then permit"
+      ]
+    },
+    "4":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match application junos-ssh"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match destination-address 10.35.38.64\/26_10.35.38.64\/26",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match destination-address 10.35.70.128\/26_10.35.70.128\/26",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match destination-address us2-chicago-colo-opc-v141-10.35.34.0\/24",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match destination-address us2-chicago-colo-opc-v141-10.35.58.0\/24",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match destination-address us2-chicago-colo-opc-v142-35.70.128\/27",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match destination-address us2-chicago-colo-opc-v341-10.35.38.64\/27",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match destination-address us2-chicago-colo-opc-v341-10.35.62.64\/27"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 match source-address us2-chicago-colo-opc-v140_10.34.219.0\/24"
+      ],
+      "row_num":[
+        2,
+        3,
+        4,
+        5,
+        6,
+        12,
+        13
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_4 then permit"
+      ]
+    },
+    "5":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_5 match application junos-ssh",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_5 match application tcp_1500-1999",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_5 match application tcp_6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_5 match destination-address us2-chicago-colo-opc-v101-10.200.15.144\/28",
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_5 match destination-address us2-chicago-colo-opc-v101-10.35.63.144\/29"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_5 match source-address us2-chicago-colo-opc-v140_10.34.219.0\/24"
+      ],
+      "row_num":[
+        14,
+        15
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 12346_psane_5 then permit"
+      ]
+    },
+    "6":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_6 match application tcp_1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_6 match application tcp_6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_6 match destination-address us2-chicago-colo-opc-v142-10.72.12.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_6 match source-address us2-chicago-colo-opc-v102-10.47.222.0\/27"
+      ],
+      "row_num":[
+        39
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_6 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c6r401-fw-1":{
+    "7":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_7 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_7 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_7 match destination-address us2-chicago-colo-opc-v140-10.35.120.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_7 match source-address us2-chicago-colo-opc-v100-10.200.135.160\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_7 match source-address us2-chicago-colo-opc-v100-10.35.111.128\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_7 match source-address us2-chicago-colo-opc-v101-10.35.71.144\/29"
+      ],
+      "row_num":[
+        31,
+        33,
+        47
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_7 then permit"
+      ]
+    },
+    "8":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_8 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_8 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_8 match destination-address us2-chicago-colo-opc-v142-10.35.124.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_8 match source-address us2-chicago-colo-opc-v102-10.35.111.160\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_8 match source-address us2-chicago-colo-opc-v102-10.35.23.160\/29"
+      ],
+      "row_num":[
+        30,
+        34
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_8 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v100-10.35.127.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.35.127.128\/29 10.35.127.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.35.120.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.35.120.0\/24 10.35.120.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.35.23.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.35.23.160\/29 10.35.23.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.35.124.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.124.0\/24 10.35.124.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.35.71.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.35.71.144\/29 10.35.71.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v100-10.35.111.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.35.111.128\/29 10.35.111.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.135.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.135.160\/29 10.200.135.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.35.108.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.108.0\/24 10.35.108.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.35.111.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.35.111.160\/29 10.35.111.160\/29\/32 \n"
+    },
+    "9":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_9 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_9 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_9 match destination-address us2-chicago-colo-opc-v142-10.35.108.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_9 match source-address us2-chicago-colo-opc-v100-10.35.127.128\/29"
+      ],
+      "row_num":[
+        32
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_9 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c5r1201-fw-1":{
+    "10":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_10 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_10 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_10 match destination-address us2-chicago-colo-opc-v142-10.72.172.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_10 match source-address us2-chicago-colo-opc-v102-10.72.167.160\/29"
+      ],
+      "row_num":[
+        22
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_10 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.72.172.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.172.0\/24 10.72.172.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.72.175.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.72.175.160\/29 10.72.175.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v102-10.72.167.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.72.167.160\/29 10.72.167.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.148.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.148.0\/24 10.72.148.0\/24\/32 \n"
+    },
+    "11":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_11 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_11 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_11 match destination-address us2-chicago-colo-opc-v142-10.72.148.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_11 match source-address us2-chicago-colo-opc-v102-10.72.175.160\/29"
+      ],
+      "row_num":[
+        23
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_11 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c5r101-fw-2":{
+    "12":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_12 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_12 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_12 match destination-address us2-chicago-colo-opc-v140-10.72.160.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_12 match source-address us2-chicago-colo-opc-v101-10.72.159.144\/29"
+      ],
+      "row_num":[
+        21
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_12 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v101-10.72.159.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.72.159.144\/29 10.72.159.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.72.160.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.72.160.0\/24 10.72.160.0\/24\/32 \n"
+    }
+  },
+  "ch3-fa-c3r510-fw-2":{
+    "13":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_13 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_13 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_13 match destination-address us2-chicago-colo-opc-v142-10.199.60.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_13 match source-address us2-chicago-colo-opc-v100-10.200.7.128\/29"
+      ],
+      "row_num":[
+        40
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_13 then permit"
+      ]
+    },
+    "14":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_14 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_14 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_14 match destination-address us2-chicago-colo-opc-v140-10.200.8.0\/24",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_14 match destination-address us2-chicago-colo-opc-v141-10.72.10.0\/24",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_14 match destination-address us2-chicago-colo-opc-v142-10.199.60.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_14 match source-address us2-chicago-colo-opc-v101-10.200.7.144\/28"
+      ],
+      "row_num":[
+        41,
+        42,
+        43
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_14 then permit"
+      ]
+    },
+    "15":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_15 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_15 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_15 match destination-address us2-chicago-colo-opc-v142-10.200.20.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_15 match source-address us2-chicago-colo-opc-v102-10.200.7.160\/29"
+      ],
+      "row_num":[
+        44
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_15 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.200.8.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.200.8.0\/24 10.200.8.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.15.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.15.128\/29 10.200.15.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.200.2.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.200.2.0\/24 10.200.2.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.199.60.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.199.60.0\/24 10.199.60.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.200.20.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.200.20.0\/24 10.200.20.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.10.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.10.0\/24 10.72.10.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.200.23.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.200.23.144\/29 10.200.23.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.200.4.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.200.4.0\/24 10.200.4.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.7.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.7.128\/29 10.200.7.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v102-10.200.7.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.200.7.160\/29 10.200.7.160\/29\/32 \n"
+    },
+    "16":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_16 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_16 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_16 match destination-address us2-chicago-colo-opc-v141-10.200.2.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_16 match source-address us2-chicago-colo-opc-v100-10.200.15.128\/29"
+      ],
+      "row_num":[
+        45
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_16 then permit"
+      ]
+    },
+    "17":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_17 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_17 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_17 match destination-address us2-chicago-colo-opc-v142-10.200.4.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_17 match source-address us2-chicago-colo-opc-v101-10.200.23.144\/29"
+      ],
+      "row_num":[
+        46
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_17 then permit"
+      ]
+    }
+  },
+  "ch3-fa-c3r510-fw-3":{
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.200.8.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.200.8.0\/24 10.200.8.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.15.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.15.128\/29 10.200.15.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.200.2.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.200.2.0\/24 10.200.2.0\/24\/32 \n"
+    },
+    "18":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_18 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_18 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_18 match destination-address us2-chicago-colo-opc-v140-10.200.8.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_18 match source-address 10.200.7.144\/28_10.200.7.144\/28"
+      ],
+      "row_num":[
+        41
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_18 then permit"
+      ]
+    },
+    "19":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_19 match application tcp_1600-1630",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_19 match application tcp_7777"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_19 match destination-address us2-chicago-colo-opc-v141-10.200.10.0\/23",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_19 match destination-address us2-chicago-colo-opc-v141-10.200.10.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_19 match source-address 10.34.219.0\/24"
+      ],
+      "row_num":[
+        7,
+        9
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_19 then permit"
+      ]
+    },
+    "20":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_20 match application junos-ssh",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_20 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_20 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_20 match destination-address us2-chicago-colo-opc-v101-10.200.15.144\/28"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_20 match source-address 10.34.219.0\/24"
+      ],
+      "row_num":[
+        15
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_20 then permit"
+      ]
+    },
+    "21":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_21 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_21 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_21 match destination-address us2-chicago-colo-opc-v141-10.200.2.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_21 match source-address us2-chicago-colo-opc-v100-10.200.15.128\/29"
+      ],
+      "row_num":[
+        45
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_21 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c6r301-fw-1":{
+    "22":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_22 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_22 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_22 match destination-address us2-chicago-colo-opc-v140-10.46.200.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_22 match source-address us2-chicago-colo-opc-v102-10.35.79.160\/29"
+      ],
+      "row_num":[
+        26
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_22 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v102-10.35.79.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.35.79.160\/29 10.35.79.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.46.200.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.46.200.0\/24 10.46.200.0\/24\/32 \n"
+    }
+  },
+  "ch3-fa-c3r510-fw-1":{
+    "23":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_23 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_23 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_23 match destination-address us2-chicago-colo-opc-v142-10.199.60.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_23 match source-address 10.35.119.144\/28_10.35.119.144\/28",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_23 match source-address us2-chicago-colo-opc-v100-10.200.7.128\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_23 match source-address us2-chicago-colo-opc-v101-10.200.7.144\/28"
+      ],
+      "row_num":[
+        35,
+        40,
+        42
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_23 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.199.60.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.199.60.0\/24 10.199.60.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.7.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.7.128\/29 10.200.7.128\/29\/32 \n"
+    }
+  },
+  "ch3-fa-c3r810-fw-1":{
+    "24":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_24 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_24 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_24 match destination-address us2-chicago-colo-opc-v141-10.200.18.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_24 match source-address 10.35.119.144\/28_10.35.119.144\/28"
+      ],
+      "row_num":[
+        36
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_24 then permit"
+      ]
+    },
+    "25":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_25 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_25 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_25 match destination-address us2-chicago-colo-opc-v142-10.200.20.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_25 match source-address us2-chicago-colo-opc-v102-10.200.7.160\/29"
+      ],
+      "row_num":[
+        44
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_25 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.200.4.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.200.4.0\/24 10.200.4.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.200.20.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.200.20.0\/24 10.200.20.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.200.7.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.200.7.160\/29 10.200.7.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v101-10.200.23.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.200.23.144\/29 10.200.23.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.200.18.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.200.18.0\/24 10.200.18.0\/24\/32 \n"
+    },
+    "26":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_26 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_26 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_26 match destination-address us2-chicago-colo-opc-v142-10.200.4.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_26 match source-address us2-chicago-colo-opc-v101-10.200.23.144\/29"
+      ],
+      "row_num":[
+        46
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_26 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c6r1301-fw-3":{
+    "27":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_27 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_27 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_27 match destination-address us2-chicago-colo-opc-v142-10.35.124.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_27 match source-address us2-chicago-colo-opc-v102-10.35.23.160\/29"
+      ],
+      "row_num":[
+        30
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_27 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v102-10.35.23.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.35.23.160\/29 10.35.23.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.35.124.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.124.0\/24 10.35.124.0\/24\/32 \n"
+    }
+  },
+  "ord13-fa-c5r401-fw-2":{
+    "28":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_28 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_28 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_28 match destination-address us2-chicago-colo-opc-v142-10.72.36.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_28 match source-address us2-chicago-colo-opc-v102-10.72.63.192\/28",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_28 match source-address us2-chicago-colo-opc-v102-10.72.7.192\/28"
+      ],
+      "row_num":[
+        17,
+        50
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_28 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.72.36.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.36.0\/24 10.72.36.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.72.63.192\/28":"set security address-book global address us2-chicago-colo-opc-v102-10.72.63.192\/28 10.72.63.192\/28\/32 \n",
+      "us2-chicago-colo-opc-v102-10.72.7.192\/28":"set security address-book global address us2-chicago-colo-opc-v102-10.72.7.192\/28 10.72.7.192\/28\/32 \n"
+    }
+  },
+  "ord13-fa-c5r401-fw-3":{
+    "29":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_29 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_29 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_29 match destination-address us2-chicago-colo-opc-v141-10.72.42.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_29 match source-address us2-chicago-colo-opc-v100-10.72.15.160\/29"
+      ],
+      "row_num":[
+        52
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_29 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v141-10.72.42.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.42.0\/24 10.72.42.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.72.15.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.72.15.160\/29 10.72.15.160\/29\/32 \n"
+    }
+  },
+  "ord13-fa-c6r301-fw-2":{
+    "30":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_30 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_30 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_30 match destination-address us2-chicago-colo-opc-v141-10.35.82.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_30 match source-address us2-chicago-colo-opc-v101-10.35.63.144\/29"
+      ],
+      "row_num":[
+        24
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_30 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.35.52.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.52.0\/24 10.35.52.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.35.63.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.35.63.144\/29 10.35.63.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.10.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.10.0\/24 10.72.10.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v141-10.35.82.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.35.82.0\/24 10.35.82.0\/24\/32 \n"
+    },
+    "31":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_31 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_31 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_31 match destination-address us2-chicago-colo-opc-v141-10.72.10.0\/24",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_31 match destination-address us2-chicago-colo-opc-v142-10.35.52.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_31 match source-address 10.35.87.160\/28_10.35.87.160\/28"
+      ],
+      "row_num":[
+        27,
+        28
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_31 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c6r101-fw-2":{
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v341-10.35.38.64\/27":"set security address-book global address us2-chicago-colo-opc-v341-10.35.38.64\/27 10.35.38.64\/27\/32 \n",
+      "us2-chicago-colo-opc-v141-10.35.34.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.35.34.0\/24 10.35.34.0\/24\/32 \n"
+    },
+    "32":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_32 match application junos-ssh"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_32 match destination-address 10.35.38.64\/26_10.35.38.64\/26",
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_32 match destination-address us2-chicago-colo-opc-v341-10.35.38.64\/27"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_32 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        5,
+        6
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_32 then permit"
+      ]
+    },
+    "33":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_33 match application junos-ssh"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_33 match destination-address us2-chicago-colo-opc-v141-10.35.34.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_33 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        3
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_33 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c6r101-fw-1":{
+    "34":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_34 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_34 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_34 match destination-address us2-chicago-colo-opc-v142-10.35.28.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_34 match source-address 10.35.103.144\/28_10.35.103.144\/28"
+      ],
+      "row_num":[
+        29
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_34 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c5r301-fw-1":{
+    "35":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_35 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_35 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_35 match destination-address us2-chicago-colo-opc-v142-10.72.60.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_35 match source-address 10.72.7.192\/28_10.72.7.192\/28"
+      ],
+      "row_num":[
+        51
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_35 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.200.160.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.200.160.0\/24 10.200.160.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.36.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.36.0\/24 10.72.36.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.60.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.60.0\/24 10.72.60.0\/24\/32 \n"
+    },
+    "36":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_36 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_36 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_36 match destination-address us2-chicago-colo-opc-v140-10.200.160.0\/24",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_36 match destination-address us2-chicago-colo-opc-v142-10.72.36.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_36 match source-address us2-chicago-colo-opc-v102-10.72.63.192\/28"
+      ],
+      "row_num":[
+        17,
+        18
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_36 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c5r301-fw-3":{
+    "37":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_37 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_37 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_37 match destination-address us2-chicago-colo-opc-v140_10.200.152.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_37 match source-address us2-chicago-colo-opc-v100-10.72.143.160\/29"
+      ],
+      "row_num":[
+        19
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_37 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v100-10.72.143.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.72.143.160\/29 10.72.143.160\/29\/32 \n"
+    }
+  },
+  "ord13-fa-c5r301-fw-2":{
+    "38":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_38 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_38 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_38 match destination-address us2-chicago-colo-opc-v142-10.72.132.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_38 match source-address us2-chicago-colo-opc-v100-10.200.191.160\/29"
+      ],
+      "row_num":[
+        48
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_38 then permit"
+      ]
+    },
+    "39":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_39 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_39 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_39 match destination-address us2-chicago-colo-opc-v140-10.72.128.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_39 match source-address us2-chicago-colo-opc-v102-10.200.151.192\/29"
+      ],
+      "row_num":[
+        57
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_39 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v100-10.200.191.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.191.160\/29 10.200.191.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v102-10.200.151.192\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.200.151.192\/29 10.200.151.192\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.132.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.132.0\/24 10.72.132.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v140-10.72.128.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.72.128.0\/24 10.72.128.0\/24\/32 \n"
+    }
+  },
+  "ord13-fa-c6r1101-fw-1":{
+    "40":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_40 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_40 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_40 match destination-address us2-chicago-colo-opc-v142-10.35.52.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_40 match source-address 10.35.87.160\/28_10.35.87.160\/28"
+      ],
+      "row_num":[
+        27
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_40 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.35.52.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.52.0\/24 10.35.52.0\/24\/32 \n"
+    }
+  },
+  "ord13-fa-c6r1101-fw-2":{
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v100-10.35.63.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.35.63.128\/29 10.35.63.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.35.58.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.35.58.0\/24 10.35.58.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.10.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.10.0\/24 10.72.10.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.35.63.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.35.63.144\/29 10.35.63.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.35.82.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.35.82.0\/24 10.35.82.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v341-10.35.62.64\/27":"set security address-book global address us2-chicago-colo-opc-v341-10.35.62.64\/27 10.35.62.64\/27\/32 \n"
+    },
+    "41":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_41 match application junos-ssh"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_41 match destination-address us2-chicago-colo-opc-v341-10.35.62.64\/27"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_41 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        4
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_41 then permit"
+      ]
+    },
+    "42":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_42 match application junos-ssh"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_42 match destination-address us2-chicago-colo-opc-v141-10.35.58.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_42 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        2
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_42 then permit"
+      ]
+    },
+    "43":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_43 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_43 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_43 match destination-address us2-chicago-colo-opc-v141-10.72.10.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_43 match source-address us2-chicago-colo-opc-v100-10.35.63.128\/29"
+      ],
+      "row_num":[
+        25
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_43 then permit"
+      ]
+    },
+    "44":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_44 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_44 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_44 match destination-address us2-chicago-colo-opc-v141-10.35.82.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_44 match source-address us2-chicago-colo-opc-v101-10.35.63.144\/29"
+      ],
+      "row_num":[
+        24
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_44 then permit"
+      ]
+    },
+    "45":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_45 match application junos-ssh",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_45 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_45 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_45 match destination-address us2-chicago-colo-opc-v101-10.35.63.144\/29"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_45 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        14
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_45 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c6r1101-fw-3":{
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.35.120.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.35.120.0\/24 10.35.120.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.35.68.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.68.0\/24 10.35.68.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.35.71.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.35.71.144\/29 10.35.71.144\/29\/32 \n"
+    },
+    "46":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_46 match application junos-ssh"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_46 match destination-address 10.35.70.128\/26_10.35.70.128\/26"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_46 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        13
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone DOMVSM policy 12346_psane_46 then permit"
+      ]
+    },
+    "47":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application junos-http-ext",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application junos-ssh",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application tcp-5556",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application tcp-7004",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application tcp_1600-1630",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application tcp_7777",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application tcp_9001",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match application tcp_9420"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match destination-address 10.35.68.0\/23_10.35.68.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        1,
+        10,
+        11
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_47 then permit"
+      ]
+    },
+    "48":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_48 match application tcp_1600-1630",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_48 match application tcp_7777"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_48 match destination-address us2-chicago-colo-opc-v142-10.35.68.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_48 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        8
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_48 then permit"
+      ]
+    },
+    "49":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_49 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_49 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_49 match destination-address us2-chicago-colo-opc-v140-10.35.120.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_49 match source-address us2-chicago-colo-opc-v101-10.35.71.144\/29"
+      ],
+      "row_num":[
+        31
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_49 then permit"
+      ]
+    },
+    "50":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_50 match application junos-ssh",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_50 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_50 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_50 match destination-address 10.35.71.160\/28_10.35.71.160\/28"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_50 match source-address us2-chicago-colo-opc-v140-10.34.219.0\/24"
+      ],
+      "row_num":[
+        16
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-DA policy 12346_psane_50 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c7r801-fw-2":{
+    "51":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_51 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_51 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_51 match destination-address us2-chicago-colo-opc-v140-10.46.200.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_51 match source-address us2-chicago-colo-opc-v100-10.46.223.128\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_51 match source-address us2-chicago-colo-opc-v102-10.35.79.160\/29"
+      ],
+      "row_num":[
+        26,
+        37
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_51 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v102-10.35.79.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.35.79.160\/29 10.35.79.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v100-10.46.223.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.46.223.128\/29 10.46.223.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.46.200.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.46.200.0\/24 10.46.200.0\/24\/32 \n"
+    }
+  },
+  "ord13-fa-c7r801-fw-3":{
+    "52":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_52 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_52 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_52 match destination-address us2-chicago-colo-opc-v140-10.46.200.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_52 match source-address us2-chicago-colo-opc-v100-10.46.223.128\/29"
+      ],
+      "row_num":[
+        37
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_52 then permit"
+      ]
+    },
+    "53":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_53 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_53 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_53 match destination-address us2-chicago-colo-opc-v140-10.47.208.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_53 match source-address us2-chicago-colo-opc-v102-10.46.223.160\/29"
+      ],
+      "row_num":[
+        38
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_53 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v102-10.46.223.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.46.223.160\/29 10.46.223.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.47.208.0\/23":"set security address-book global address us2-chicago-colo-opc-v140-10.47.208.0\/23 10.47.208.0\/23\/32 \n",
+      "us2-chicago-colo-opc-v100-10.46.223.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.46.223.128\/29 10.46.223.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.46.200.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.46.200.0\/24 10.46.200.0\/24\/32 \n"
+    }
+  },
+  "ord13-fa-c6r1401-fw-3":{
+    "54":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_54 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_54 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_54 match destination-address us2-chicago-colo-opc-v141-10.200.18.0\/24",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_54 match destination-address us2-chicago-colo-opc-v142-10.199.60.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_54 match source-address 10.35.119.144\/28_10.35.119.144\/28"
+      ],
+      "row_num":[
+        35,
+        36
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_54 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.199.60.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.199.60.0\/24 10.199.60.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v141-10.200.18.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.200.18.0\/24 10.200.18.0\/24\/32 \n"
+    }
+  },
+  "ord13-fa-c6r1401-fw-2":{
+    "55":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_55 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_55 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_55 match destination-address us2-chicago-colo-opc-v140-10.35.120.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_55 match source-address us2-chicago-colo-opc-v100-10.35.111.128\/29"
+      ],
+      "row_num":[
+        33
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_55 then permit"
+      ]
+    },
+    "56":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_56 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_56 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_56 match destination-address us2-chicago-colo-opc-v142-10.35.124.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_56 match source-address us2-chicago-colo-opc-v102-10.35.111.160\/29"
+      ],
+      "row_num":[
+        34
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_56 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v100-10.35.127.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.35.127.128\/29 10.35.127.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.35.120.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.35.120.0\/24 10.35.120.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.35.124.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.124.0\/24 10.35.124.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.35.111.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.35.111.128\/29 10.35.111.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.35.108.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.35.108.0\/24 10.35.108.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.35.111.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.35.111.160\/29 10.35.111.160\/29\/32 \n"
+    },
+    "57":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_57 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_57 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_57 match destination-address us2-chicago-colo-opc-v142-10.35.108.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_57 match source-address us2-chicago-colo-opc-v100-10.35.127.128\/29"
+      ],
+      "row_num":[
+        32
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_57 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c6r1401-fw-1":{
+    "58":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_58 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_58 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_58 match destination-address us2-chicago-colo-opc-v142_10.35.28.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_58 match source-address us2-chicago-colo-opc-v101-10.35.103.144\/28"
+      ],
+      "row_num":[
+        29
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_58 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c5r101-fw-3":{
+    "59":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_59 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_59 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_59 match destination-address us2-chicago-colo-opc-v140-10.72.160.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_59 match source-address us2-chicago-colo-opc-v101-10.72.159.144\/29"
+      ],
+      "row_num":[
+        21
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_59 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v101-10.72.159.144\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.72.159.144\/29 10.72.159.144\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.172.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.172.0\/24 10.72.172.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v140-10.72.160.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.72.160.0\/24 10.72.160.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.72.167.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.72.167.160\/29 10.72.167.160\/29\/32 \n"
+    },
+    "60":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_60 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_60 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_60 match destination-address us2-chicago-colo-opc-v142-10.72.172.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_60 match source-address us2-chicago-colo-opc-v102-10.72.167.160\/29"
+      ],
+      "row_num":[
+        22
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_60 then permit"
+      ]
+    }
+  },
+  "ch3-fa-c4r210-fw-3":{
+    "61":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 match destination-address us2-chicago-colo-opc-v141-10.72.10.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 match source-address 10.200.7.144\/28_10.200.7.144\/28",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 match source-address 10.35.87.160\/28_10.35.87.160\/28",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 match source-address us2-chicago-colo-opc-v100-10.200.175.160\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 match source-address us2-chicago-colo-opc-v100-10.35.63.128\/29"
+      ],
+      "row_num":[
+        25,
+        28,
+        43,
+        58
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_61 then permit"
+      ]
+    },
+    "62":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_62 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_62 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_62 match destination-address us2-chicago-colo-opc-v142-10.72.12.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_62 match source-address us2-chicago-colo-opc-v102-10.47.222.0\/27"
+      ],
+      "row_num":[
+        39
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_62 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v100-10.35.63.128\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.35.63.128\/29 10.35.63.128\/29\/32 \n",
+      "us2-chicago-colo-opc-v101-10.72.15.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.72.15.176\/29 10.72.15.176\/29\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.175.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.175.160\/29 10.200.175.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.42.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.42.0\/24 10.72.42.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.72.15.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.72.15.160\/29 10.72.15.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.10.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.10.0\/24 10.72.10.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v102-10.47.222.0\/27":"set security address-book global address us2-chicago-colo-opc-v102-10.47.222.0\/27 10.47.222.0\/27\/32 \n",
+      "us2-chicago-colo-opc-v142-10.200.172.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.200.172.0\/24 10.200.172.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.12.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.12.0\/24 10.72.12.0\/24\/32 \n"
+    },
+    "63":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_63 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_63 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_63 match destination-address us2-chicago-colo-opc-v141-10.72.42.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_63 match source-address us2-chicago-colo-opc-v100-10.72.15.160\/29"
+      ],
+      "row_num":[
+        52
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_63 then permit"
+      ]
+    },
+    "64":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_64 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_64 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_64 match destination-address us2-chicago-colo-opc-v142-10.200.172.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_64 match source-address us2-chicago-colo-opc-v101-10.72.15.176\/29"
+      ],
+      "row_num":[
+        53
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_64 then permit"
+      ]
+    }
+  },
+  "ord13-fa-c5r101-fw-1":{
+    "65":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_65 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_65 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_65 match destination-address us2-chicago-colo-opc-v140_10.200.152.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_65 match source-address us2-chicago-colo-opc-v102-10.72.151.160\/29"
+      ],
+      "row_num":[
+        20
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_65 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v102-10.72.151.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.72.151.160\/29 10.72.151.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v102-10.72.175.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.72.175.160\/29 10.72.175.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.148.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.148.0\/24 10.72.148.0\/24\/32 \n"
+    },
+    "66":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_66 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_66 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_66 match destination-address us2-chicago-colo-opc-v142-10.72.148.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_66 match source-address us2-chicago-colo-opc-v102-10.72.175.160\/29"
+      ],
+      "row_num":[
+        23
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_66 then permit"
+      ]
+    }
+  },
+  "ch3-fa-c4r210-fw-1":{
+    "67":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_67 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_67 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_67 match destination-address us2-chicago-colo-opc-v142-10.72.132.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_67 match source-address us2-chicago-colo-opc-v100-10.200.191.160\/29"
+      ],
+      "row_num":[
+        48
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_67 then permit"
+      ]
+    },
+    "68":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_68 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_68 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_68 match destination-address us2-chicago-colo-opc-v140-10.72.0.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_68 match source-address us2-chicago-colo-opc-v101-10.200.191.176\/29"
+      ],
+      "row_num":[
+        49
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_68 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.72.0.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.72.0.0\/24 10.72.0.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.191.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.191.160\/29 10.200.191.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v101-10.200.191.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.200.191.176\/29 10.200.191.176\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.132.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.132.0\/24 10.72.132.0\/24\/32 \n"
+    }
+  },
+  "ch3-fa-c3r410-fw-2":{
+    "69":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_69 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_69 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_69 match destination-address us2-chicago-colo-opc-v140-10.35.120.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_69 match source-address us2-chicago-colo-opc-v100-10.200.135.160\/29"
+      ],
+      "row_num":[
+        47
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_69 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.35.120.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.35.120.0\/24 10.35.120.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.135.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.135.160\/29 10.200.135.160\/29\/32 \n"
+    }
+  },
+  "ch3-fa-c4r512-fw-1":{
+    "70":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_70 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_70 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_70 match destination-address us2-chicago-colo-opc-v141-10.72.2.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_70 match source-address us2-chicago-colo-opc-v101-10.72.23.176\/29"
+      ],
+      "row_num":[
+        59
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_70 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v101-10.72.23.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.72.23.176\/29 10.72.23.176\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.2.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.2.0\/24 10.72.2.0\/24\/32 \n"
+    }
+  },
+  "ch3-fa-c4r208-fw-2":{
+    "71":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_71 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_71 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_71 match destination-address us2-chicago-colo-opc-v142-10.200.172.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_71 match source-address us2-chicago-colo-opc-v101-10.72.15.176\/29"
+      ],
+      "row_num":[
+        53
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_71 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v142-10.200.172.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.200.172.0\/24 10.200.172.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.175.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.175.160\/29 10.200.175.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.10.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.10.0\/24 10.72.10.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.72.15.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.72.15.176\/29 10.72.15.176\/29\/32 \n"
+    },
+    "72":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_72 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_72 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_72 match destination-address us2-chicago-colo-opc-v141-10.72.10.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_72 match source-address us2-chicago-colo-opc-v100-10.200.175.160\/29"
+      ],
+      "row_num":[
+        58
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_72 then permit"
+      ]
+    }
+  },
+  "ch3-fa-c4r208-fw-1":{
+    "73":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_73 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_73 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_73 match destination-address us2-chicago-colo-opc-v140-10.200.160.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_73 match source-address 10.72.63.192\/28_10.72.63.192\/28",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_73 match source-address us2-chicago-colo-opc-v101-10.200.143.176\/29"
+      ],
+      "row_num":[
+        18,
+        54
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_73 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.200.160.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.200.160.0\/24 10.200.160.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.200.143.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.200.143.176\/29 10.200.143.176\/29\/32 \n"
+    }
+  },
+  "ch3-fa-c4r210-fw-2":{
+    "74":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_74 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_74 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_74 match destination-address us2-chicago-colo-opc-v140-10.72.0.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_74 match source-address us2-chicago-colo-opc-v101-10.200.191.176\/29"
+      ],
+      "row_num":[
+        49
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_74 then permit"
+      ]
+    },
+    "75":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_75 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_75 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_75 match destination-address us2-chicago-colo-opc-v141-10.72.2.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_75 match source-address us2-chicago-colo-opc-v101-10.72.23.176\/29"
+      ],
+      "row_num":[
+        59
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_75 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v101-10.72.23.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.72.23.176\/29 10.72.23.176\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.72.0.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.72.0.0\/24 10.72.0.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.200.191.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.200.191.176\/29 10.200.191.176\/29\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.60.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.60.0\/24 10.72.60.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v142-10.72.36.0\/24":"set security address-book global address us2-chicago-colo-opc-v142-10.72.36.0\/24 10.72.36.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v141-10.72.2.0\/24":"set security address-book global address us2-chicago-colo-opc-v141-10.72.2.0\/24 10.72.2.0\/24\/32 \n"
+    },
+    "76":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_76 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_76 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_76 match destination-address us2-chicago-colo-opc-v142-10.72.36.0\/24",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_76 match destination-address us2-chicago-colo-opc-v142-10.72.60.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_76 match source-address 10.72.7.192\/28"
+      ],
+      "row_num":[
+        50,
+        51
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_76 then permit"
+      ]
+    }
+  },
+  "ch3-fa-c4r209-fw-1":{
+    "77":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_77 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_77 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_77 match destination-address us2-chicago-colo-opc-v140-10.200.160.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_77 match source-address us2-chicago-colo-opc-v101-10.200.143.176\/29"
+      ],
+      "row_num":[
+        54
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_77 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v140-10.200.160.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.200.160.0\/24 10.200.160.0\/24\/32 \n",
+      "us2-chicago-colo-opc-v101-10.200.143.176\/29":"set security address-book global address us2-chicago-colo-opc-v101-10.200.143.176\/29 10.200.143.176\/29\/32 \n"
+    }
+  },
+  "ch3-fa-c4r209-fw-2":{
+    "78":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_78 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_78 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_78 match destination-address us2-chicago-colo-opc-v140-10.72.128.0\/24"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_78 match source-address us2-chicago-colo-opc-v102-10.200.151.192\/29"
+      ],
+      "row_num":[
+        57
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_78 then permit"
+      ]
+    },
+    "79":{
+      "app_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_79 match application tcp-1500-1999",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_79 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_79 match destination-address us2-chicago-colo-opc-v140_10.200.152.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_79 match source-address 10.200.151.176\/28",
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_79 match source-address us2-chicago-colo-opc-v100-10.200.151.160\/29"
+      ],
+      "row_num":[
+        55,
+        56
+      ],
+      "permit_cmd":[
+        "set security policies from-zone PRIVATE-DA to-zone UNTRUST policy 12346_psane_79 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v100-10.200.151.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.151.160\/29 10.200.151.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v102-10.200.151.192\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.200.151.192\/29 10.200.151.192\/29\/32 \n",
+      "us2-chicago-colo-opc-v140-10.72.128.0\/24":"set security address-book global address us2-chicago-colo-opc-v140-10.72.128.0\/24 10.72.128.0\/24\/32 \n"
+    }
+  },
+  "ch3-fa-c4r209-fw-3":{
+    "80":{
+      "app_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 match application tcp-1500-1999",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 match application tcp-6000-6999"
+      ],
+      "dst_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 match destination-address us2-chicago-colo-opc-v140-10.200.152.0\/23"
+      ],
+      "src_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 match source-address 10.200.151.176\/28_10.200.151.176\/28",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 match source-address us2-chicago-colo-opc-v100-10.200.151.160\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 match source-address us2-chicago-colo-opc-v100-10.72.143.160\/29",
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 match source-address us2-chicago-colo-opc-v102-10.72.151.160\/29"
+      ],
+      "row_num":[
+        19,
+        20,
+        55,
+        56
+      ],
+      "permit_cmd":[
+        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 12346_psane_80 then permit"
+      ]
+    },
+    "new_src_cmd":{
+      "us2-chicago-colo-opc-v102-10.72.151.160\/29":"set security address-book global address us2-chicago-colo-opc-v102-10.72.151.160\/29 10.72.151.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v100-10.72.143.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.72.143.160\/29 10.72.143.160\/29\/32 \n",
+      "us2-chicago-colo-opc-v100-10.200.151.160\/29":"set security address-book global address us2-chicago-colo-opc-v100-10.200.151.160\/29 10.200.151.160\/29\/32 \n"
+    }
+  },
+  "compare_cmd":"show | compare"
+}

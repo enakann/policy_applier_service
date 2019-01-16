@@ -1,0 +1,13 @@
+
+messages can be found here for reference
+/home/netauto/FiRMS/builder/data/psane/2018/07/02/180219__090223
+
+./psane/2018/06/07/100010__092704/100010_policies.txt
+./psane/2018/06/07/100010__094705/100010_policies.txt
+./psane/2018/06/07/100010__094411/100010_policies.txt
+./psane/2018/06/07/100010__092544/100010_policies.txt
+./psane/2018/06/07/100010__094936/100010_policies.txt
+
+
+new_app_cmd is there in builder
+new_addr_cmd is not there in builder

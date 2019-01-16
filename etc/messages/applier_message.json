@@ -1,0 +1,100 @@
+[
+  {
+      "firewalls": [
+          {
+            "firewall-name" : "ch3-opc-fw-1",
+            "meta-data": {
+                "vendor": "Juniper",
+                "model": "SRX",
+                "domain" : "xyz"
+        },
+            "new_addr_cmd":    [
+          "set security address-book global address us6-ashburn-colo-opc-nat1-129.158.75.117/32 129.158.75.117/32",
+                "set security address-book global address us6-ashburn-colo-opc-nat1-129.158.75.116/32 129.158.75.116/32"
+        ],
+            "new_app_cmd": [
+                "set applications application tcp-2006 protocol tcp\nset applications application tcp-2006 destination-port 2006",
+                "set applications application tcp-2001 protocol tcp\nset applications application tcp-2001 destination-port 2001",
+                "set applications application tcp-2002 protocol tcp\nset applications application tcp-2002 destination-port 2002"
+        ],
+            "pol_details": [
+                {
+                    "pol_cmd": [
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 match application junos-sccp",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 match destination-address lpclmx0017",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 match source-address us6-ashburn-colo-opc-nat1-129.158.75.116/32",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 then permit"
+            ],
+                    "row_num": [
+              5
+            ],
+                    "template-name" : [
+              ""
+            ]
+          },
+                {
+                    "pol_cmd": [
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 match application junos-sccp",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 match destination-address lpclmx0018",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 match source-address us6-ashburn-colo-opc-nat1-129.158.75.117/32",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 then permit"
+            ],
+                    "row_num": [
+              5
+            ],
+                    "template-name" : [
+              ""
+            ]
+          }
+        ]
+      },
+          {
+            "firewall-name" : "ord13-fa-c5r101-fw-2",
+            "meta-data": {
+                "vendor": "Juniper",
+                "model": "SRX",
+                "domain" : "xyz"
+        },
+            "new_addr_cmd":      [
+          "set security address-book global address us6-ashburn-colo-opc-nat1-129.158.75.117/32 129.158.75.117/32",
+                "set security address-book global address us6-ashburn-colo-opc-nat1-129.158.75.116/32 129.158.75.116/32"
+        ],
+            "new_app_cmd": [
+                "set applications application tcp-2006 protocol tcp\nset applications application tcp-2006 destination-port 2006",
+                "set applications application tcp-2001 protocol tcp\nset applications application tcp-2001 destination-port 2001",
+                "set applications application tcp-2002 protocol tcp\nset applications application tcp-2002 destination-port 2002"
+        ],
+            "pol_details": [
+                {
+                    "pol_cmd": [
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 match application junos-sccp",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 match destination-address lpclmx0017",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 match source-address us6-ashburn-colo-opc-nat1-129.158.75.116/32",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_1 then permit"
+            ],
+                    "row_num": [
+              5
+            ],
+                    "template-name" : [
+              ""
+            ]
+          },
+                {
+                    "pol_cmd": [
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 match application junos-sccp",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 match destination-address lpclmx0018",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 match source-address us6-ashburn-colo-opc-nat1-129.158.75.117/32",
+                        "set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 180219-000610_psane_2 then permit"
+            ],
+                    "row_num": [
+              5
+            ],
+                    "template-name" : [
+              ""
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

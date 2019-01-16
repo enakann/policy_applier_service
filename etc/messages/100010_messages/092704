@@ -1,0 +1,166 @@
+[root@ch3-c-noobprimt-firmsmt-01 out]# cat ./psane/2018/06/07/100010__092704/100010_policies.txt
+
+***iad37-fa-c2r301-fw-2
+ ===============================================
+
+set applications application tcp-7778 protocol tcp
+set applications application tcp-7778 destination-port 7778
+set applications application tcp-7783-7785 protocol tcp
+set applications application tcp-7783-7785 destination-port 7783-7785
+set applications application tcp-6702-6709 protocol tcp
+set applications application tcp-6702-6709 destination-port 6702-6709
+set applications application tcp-7780 protocol tcp
+set applications application tcp-7780 destination-port 7780
+set applications application tcp-7787 protocol tcp
+set applications application tcp-7787 destination-port 7787
+
+Policies recommended for record number(s) 33
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_1 match source-address us6-fa-10.85.186.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_1 match destination-address us6-10.85.168.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_1 match application junos-ssh
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_1 then permit
+
+***iad37-fa-c2r1105-fw-1
+ ===============================================
+
+set applications application tcp-7778 protocol tcp
+set applications application tcp-7778 destination-port 7778
+set applications application tcp-7783-7785 protocol tcp
+set applications application tcp-7783-7785 destination-port 7783-7785
+set applications application tcp-6702-6709 protocol tcp
+set applications application tcp-6702-6709 destination-port 6702-6709
+set applications application tcp-7780 protocol tcp
+set applications application tcp-7780 destination-port 7780
+set applications application tcp-7787 protocol tcp
+set applications application tcp-7787 destination-port 7787
+
+Policies recommended for record number(s) 3
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_2 match source-address us6-ashburn-colo-opc-v143-10.85.184.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_2 match destination-address us6-ashburn-colo-opc-v140-10.85.128.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_2 match application junos-ssh
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_2 then permit
+
+Policies recommended for record number(s) 41,46
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 match source-address us6-ashburn-colo-opc-10.85.186.0/23
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 match destination-address us6-ashburn-colo-opc-v140-10.59.64.0/22
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 match destination-address us6-ashburn-colo-opc-v140_10.59.160.0/22
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 match application tcp_1600-1630
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 match application tcp_7777
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 match application tcp_9001
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 match application tcp_9420
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_3 then permit
+
+Policies recommended for record number(s) 30
+set security policies from-zone PRIVATE-MT to-zone PRIVATE-MT policy 100010_psane_4 match source-address us6-ashburn-colo-opc-10.85.186.0/23
+set security policies from-zone PRIVATE-MT to-zone PRIVATE-MT policy 100010_psane_4 match destination-address us6-ashburn-colo-opc-v140-10.85.128.0/23
+set security policies from-zone PRIVATE-MT to-zone PRIVATE-MT policy 100010_psane_4 match application tcp_1600-1630
+set security policies from-zone PRIVATE-MT to-zone PRIVATE-MT policy 100010_psane_4 match application tcp_7777
+set security policies from-zone PRIVATE-MT to-zone PRIVATE-MT policy 100010_psane_4 match application tcp_9001
+set security policies from-zone PRIVATE-MT to-zone PRIVATE-MT policy 100010_psane_4 match application tcp_9420
+set security policies from-zone PRIVATE-MT to-zone PRIVATE-MT policy 100010_psane_4 then permit
+
+***iad37-fa-c2r1105-fw-3
+ ===============================================
+
+set applications application tcp-7778 protocol tcp
+set applications application tcp-7778 destination-port 7778
+set applications application tcp-7783-7785 protocol tcp
+set applications application tcp-7783-7785 destination-port 7783-7785
+set applications application tcp-6702-6709 protocol tcp
+set applications application tcp-6702-6709 destination-port 6702-6709
+set applications application tcp-7780 protocol tcp
+set applications application tcp-7780 destination-port 7780
+set applications application tcp-7787 protocol tcp
+set applications application tcp-7787 destination-port 7787
+
+Policies recommended for record number(s) 4
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_5 match source-address subnet-10.85.184.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_5 match destination-address us6-10.85.146.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_5 match application junos-ssh
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_5 then permit
+
+Policies recommended for record number(s) 31,34,40
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match source-address us6-v143-10.85.186.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match destination-address us6-10.85.146.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match destination-address us6-v140-10.85.144.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match destination-address us6-v142-10.85.148.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match application junos-http-ext
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match application tcp-1600-1630
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match application tcp-5556
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match application tcp-7004
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match application tcp-9001
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 match application tcp-9420
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_6 then permit
+
+Policies recommended for record number(s) 58
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_7 match source-address us6-fa-v143-10.85.190.0/23
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_7 match destination-address us6-ashburn-colo-opc-v139-10.198.171.0/25
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_7 match application junos-ssh
+set security policies from-zone PRIVATE-MT to-zone UNTRUST policy 100010_psane_7 then permit
+
+***iad37-fa-c2r1105-fw-2
+ ===============================================
+
+set applications application tcp-7778 protocol tcp
+set applications application tcp-7778 destination-port 7778
+set applications application tcp-7783-7785 protocol tcp
+set applications application tcp-7783-7785 destination-port 7783-7785
+set applications application tcp-6702-6709 protocol tcp
+set applications application tcp-6702-6709 destination-port 6702-6709
+set applications application tcp-7780 protocol tcp
+set applications application tcp-7780 destination-port 7780
+set applications application tcp-7787 protocol tcp
+set applications application tcp-7787 destination-port 7787
+
+Policies recommended for record number(s) 1,22
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_8 match source-address us6-ashburn-colo-opc-v143-10.85.184.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_8 match destination-address us6-ashburn-colo-opc-v141-10.85.138.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_8 match destination-address us6-ashburn-colo-opc-v142-10.85.140.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_8 match application junos-ssh
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_8 then permit
+
+***iad37-fa-c5r101-fw-1
+ ===============================================
+
+
+Policies recommended for record number(s) 8,11,35,38
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_9 match source-address us6-ashburn-colo-opc-v143-10.85.184.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_9 match source-address us6-ashburn-colo-opc-v143-10.85.186.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_9 match destination-address us6-ashburn-colo-opc-v141-10.54.86.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_9 match destination-address us6-ashburn-colo-opc-v142-10.54.88.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_9 match application junos-ssh
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_9 then permit
+
+***iad37-fa-c5r101-fw-2
+ ===============================================
+
+
+Policies recommended for record number(s) 5,20,21,32,47,48
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_10 match source-address us6-ashburn-colo-opc-v143-10.85.184.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_10 match source-address us6-ashburn-colo-opc-v143-10.85.186.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_10 match destination-address us6-ashburn-colo-opc-v140-10.54.92.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_10 match destination-address us6-ashburn-colo-opc-v141-10.54.94.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_10 match destination-address us6-ashburn-colo-opc-v142-10.54.96.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_10 match application junos-ssh
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_10 then permit
+
+***iad35-opc-fw-1
+ ===============================================
+
+set applications application tcp-7783-7785 protocol tcp
+set applications application tcp-7783-7785 destination-port 7783-7785
+set applications application tcp-6702-6709 protocol tcp
+set applications application tcp-6702-6709 destination-port 6702-6709
+set applications application tcp-7780 protocol tcp
+set applications application tcp-7780 destination-port 7780
+
+Policies recommended for record number(s) 2,12,25,29,39,52
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_11 match source-address net-10.85.184.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_11 match source-address us6-ashburn-colo-opc-10.85.186.0/23
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_11 match destination-address us6-opc-c5r209-v10.54.104.0/22
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_11 match destination-address us6-opc-c5r211-v10.54.108.0/22
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_11 match destination-address us6-opc-c5r213-v10.54.112.0/22
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_11 match application junos-ssh
+set security policies from-zone UNTRUST to-zone PRIVATE-MT policy 100010_psane_11 then permit
+
+show | compare[root@ch3-c-noobprimt-firmsmt-01 out]#
