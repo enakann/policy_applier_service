@@ -1,2 +1,3 @@
 venv
 etc/prod_consumer_config.yml
+*.pyc
