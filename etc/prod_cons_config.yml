@@ -1,0 +1,19 @@
+test_pap_pas:
+  userName: kannan
+  password: divya123
+  host: rabbitmq-2
+  port: 5672
+  virtualHost: /
+  exchangeName: firms.pas.tx
+  queueName: firms.pap.pas.q
+  routingKey: pap
+
+test_app_pas:
+  userName: kannan
+  password: divya123
+  host: rabbitmq-2
+  port: 5672
+  virtualHost: /
+  exchangeName: firms.pas.tx
+  queueName: firms.app.pas.q
+  routingKey: app
