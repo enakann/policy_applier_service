@@ -14,3 +14,32 @@ d.if not already processed:
      6.store it in the db(table:Applier_result)
      7.Write the message into file system based on guid/date/
      8.Construct mail and notify the user
+
+Notes
+----------
+builder    --- current o/p + uniqueid
+
+CM
+
+psane
+PAP - i/p unique id and email id
+    go and find out the relevant JSON file
+    Convert it into a message
+    Publish it into some queue -- ABC
+
+PAS    -
+    consume the message from ABC (userid and mail should be there)
+    Convert into applier consumable format
+    Checks
+        whether its alreayd there or not
+    Publish to applier queue (applier queue)
+
+    Consumes the applier-result from this queue
+    Then convert it into text or csv whatever --- TBD
+    Then send mail to the user
+
+
+Applier
+    Consume from applier queue
+    Do all the great stuff -
+    Publish the result into some again applier-resp queue

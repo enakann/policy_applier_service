@@ -1,6 +1,11 @@
-[
-  {
-      "firewalls": [
+{
+  "headers": {
+    "unique_id": "99",
+    "username": "navkanna",
+    "ticket_num": "123-456",
+    "email":"Navaneetha.k.kannan@oracle.com"
+  },
+     "firewalls": [
           {
             "firewall-name" : "ch3-opc-fw-1",
             "meta-data": {
@@ -97,4 +102,4 @@
       }
     ]
   }
-]
+
