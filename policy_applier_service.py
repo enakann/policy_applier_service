@@ -1,3 +1,5 @@
+from pathlib import Path
+
 class Validator:
     """Verify is the message is already processed or not """
     def __init__(self,header,msg):
@@ -42,7 +44,48 @@ class BuilderToApplierJsonTranformer:
         """Transform Builder json to Appler Json data"""
 
 class JsonToTextFileTransformer:
-    pass
+    def __init__(self,header,payload):
+        self.header=header
+        self.payload=payload
+        self.result_file="result.txt"
+
+    def get_payload(self):
+        return self.payload()
+
+    def get_user(self):
+        return self.headers['username']
+
+    def get_unique_id(self):
+        return self.headers['unique_id']
+
+    def get_path(self):
+        username=self.get_user()
+        unique_id=self.get_unique_id()
+        return '/home/{}/{}/'.format(username,unique_id)
+
+    def makedir(self):
+        result_path=self.get_path()
+        path = Path(result_path)
+        try:
+           path.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            raise e
+
+    def write_result(self):
+        self.makedir()
+        filename=os.path.join(self.get_path(),self.result_file)
+        with open(filename,'w') as file_handler:
+            for line in self.payload:
+                file_handler.write(line)
+                file_handler.write('\n')
+
+
+
+
+
+
+
+
 
 class NotifyUser:
     pass

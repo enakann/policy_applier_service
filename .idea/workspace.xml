@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ee3582-7fff-422c-90ec-de20278c4170" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/mail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Policy_applier_service_design" beforeDir="false" afterPath="$PROJECT_DIR$/Policy_applier_service_design" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etc/messages/applier_message.json" beforeDir="false" afterPath="$PROJECT_DIR$/etc/messages/applier_message.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/policy_applier_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/policy_applier_service.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,13 +34,14 @@
     <session id="-107784102">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -50,7 +51,7 @@
           <entry key="Policy_applier_service_design" value="7" />
           <entry key="json" value="22" />
           <entry key="md" value="1" />
-          <entry key="py" value="16" />
+          <entry key="py" value="17" />
           <entry key="sql" value="1" />
           <entry key="txt" value="6" />
           <entry key="yml" value="5" />
@@ -62,7 +63,7 @@
           <entry key="JSON" value="22" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="16" />
-          <entry key="Python" value="16" />
+          <entry key="Python" value="17" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
         </counts>
@@ -72,19 +73,19 @@
           <entry key="Policy_applier_service_design" value="1136" />
           <entry key="Python Console" value="78" />
           <entry key="dummy" value="12" />
-          <entry key="json" value="68" />
+          <entry key="json" value="83" />
           <entry key="md" value="6" />
-          <entry key="py" value="800" />
-          <entry key="txt" value="214" />
+          <entry key="py" value="1542" />
+          <entry key="txt" value="251" />
           <entry key="yml" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="68" />
+          <entry key="JSON" value="83" />
           <entry key="Markdown" value="6" />
-          <entry key="PLAIN_TEXT" value="1362" />
-          <entry key="Python" value="878" />
+          <entry key="PLAIN_TEXT" value="1399" />
+          <entry key="Python" value="1620" />
           <entry key="YAML" value="90" />
         </counts>
       </usages-collector>
@@ -96,14 +97,14 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6331878">
+    <splitter split-orientation="horizontal" split-proportion="0.37659034">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/etc/messages/applier_message.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1751">
-                  <caret line="103" column="3" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -121,20 +122,29 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/policy_applier_service.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="341">
-                  <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+                <state relative-caret-position="153">
+                  <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Policy_applier_service_design">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="289">
                   <caret line="17" selection-start-line="17" selection-end-line="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/mail.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="383">
+                  <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -177,17 +187,18 @@
         <option value="$PROJECT_DIR$/etc/messages/info.txt" />
         <option value="$PROJECT_DIR$/etc/messages/new_polcies_big.json" />
         <option value="$PROJECT_DIR$/service_lib/policy_applier_service.py" />
-        <option value="$PROJECT_DIR$/policy_applier_service.py" />
         <option value="$PROJECT_DIR$/etc/prod_consumer_config.yml" />
         <option value="$PROJECT_DIR$/lib/publisher.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Policy_applier_service_design" />
+        <option value="$PROJECT_DIR$/utils/mail.py" />
         <option value="$PROJECT_DIR$/etc/messages/applier_message.json" />
+        <option value="$PROJECT_DIR$/policy_applier_service.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="183" />
+    <option name="x" value="282" />
     <option name="y" value="81" />
     <option name="width" value="1746" />
     <option name="height" value="924" />
@@ -205,6 +216,11 @@
             <path>
               <item name="Firms2_intermin_solution" type="b2602c69:ProjectViewProjectNode" />
               <item name="Firms2_intermin_solution" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Firms2_intermin_solution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Firms2_intermin_solution" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Firms2_intermin_solution" type="b2602c69:ProjectViewProjectNode" />
@@ -302,20 +318,26 @@
       <option name="project" value="LOCAL" />
       <updated>1547713846544</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Applier message updated with header">
+      <created>1547813973645</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547813973645</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2582996" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.04534413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.048237476" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.048237476" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,6 +348,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4979757" weight="0.79777366" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.502834" side_tool="true" weight="0.3283859" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49959514" weight="0.3283859" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -392,7 +415,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature commit" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="Applier message updated with header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Applier message updated with header" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -531,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/policy_applier_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Policy_applier_service_design">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -545,10 +562,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/mail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/etc/messages/applier_message.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="3" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/policy_applier_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
