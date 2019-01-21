@@ -19,14 +19,14 @@ class YAML:
         except Exception as e:
             raise e
         return config
-        
-    
+
+
     def _get_new_config(self,config):
         return config[self.name]
 
 
 if __name__ == '__main__':
-    yml=YAML("consumer_config.yml","approver_cm")
+    yml=YAML("prod_cons_config.yml","test_pap_pas")
     conf=yml.get_config()
     print(conf)
 

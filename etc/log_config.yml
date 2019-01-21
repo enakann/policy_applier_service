@@ -34,7 +34,7 @@ handlers:
   console:
     class: logging.StreamHandler
     level: DEBUG
-    formatter: verbose
+    formatter: simple
     stream: ext://sys.stdout
 
 
@@ -42,6 +42,10 @@ handlers:
 
 
 loggers:
+  test:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
   kannan:
     level: DEBUG
     handlers: [console,info_file_handler,error_file_handler]
