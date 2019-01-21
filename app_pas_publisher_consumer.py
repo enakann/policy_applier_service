@@ -1,8 +1,10 @@
 import logging
 from lib.rabbitmq_worker import Worker
 from lib.properties import Properties
+from utils.yml import YAML
 
-yml = YAML ("consumer_config.yml", "cm_consumer_of_gen")
+#import pdb;pdb.set_trace()
+yml = YAML ("prod_cons_config.yml", "test_app_pas")
 config = yml.get_config()
 
 prop_obj = Properties()
@@ -12,9 +14,9 @@ worker = Worker(config['host'], config['port'], config['userName'], config['pass
 # 'on_consume' method would be called on successful consumption of the message
 # Ack/reject message
 def on_consume(unused_channel, basic_deliver, properties, body):
-    LOGGER.info('Do Something ..')
-    LOGGER.info('send ack ..')
-    worker.acknowledge_message (basic_deliver.delivery_tag)
+    print(properties)
+    print(body)
+    #worker.acknowledge_message (basic_deliver.delivery_tag)
     # LOGGER.info('send reject ..')
     # worker.reject_message(basic_deliver.delivery_tag)
 
@@ -25,7 +27,7 @@ def on_consume(unused_channel, basic_deliver, properties, body):
 
 # 'on_publish' function would be called after the successful publish
 def on_publish():
-    LOGGER.info ('Do something ..')
+    print("on publishing return")
 
 
 def main():

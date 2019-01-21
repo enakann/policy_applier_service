@@ -3,8 +3,7 @@ from utils.yml import YAML
 
 yml=YAML("prod_cons_config.yml","test_app_pas")
 config=yml.get_config()
-
-
+print(config)
 
 
 msg={"headers":{

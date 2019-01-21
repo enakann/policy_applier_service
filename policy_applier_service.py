@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import os
 class Validator:
     """Verify is the message is already processed or not """
     def __init__(self,header,msg):
@@ -44,19 +44,23 @@ class BuilderToApplierJsonTranformer:
         """Transform Builder json to Appler Json data"""
 
 class JsonToTextFileTransformer:
-    def __init__(self,header,payload):
-        self.header=header
-        self.payload=payload
+    def __init__(self,msg):
+        self.msg=msg
         self.result_file="result.txt"
 
     def get_payload(self):
-        return self.payload()
+        return self.msg['payload']
+
+    def get_headers(self):
+        return self.msg['headers']
 
     def get_user(self):
-        return self.headers['username']
+        header=self.get_headers()
+        return header['username']
 
     def get_unique_id(self):
-        return self.headers['unique_id']
+        header=self.get_headers()
+        return header['unique_id']
 
     def get_path(self):
         username=self.get_user()
@@ -73,18 +77,12 @@ class JsonToTextFileTransformer:
 
     def write_result(self):
         self.makedir()
+        payload=self.get_payload()
         filename=os.path.join(self.get_path(),self.result_file)
         with open(filename,'w') as file_handler:
-            for line in self.payload:
+            for line in payload:
                 file_handler.write(line)
                 file_handler.write('\n')
-
-
-
-
-
-
-
 
 
 class NotifyUser:
@@ -92,6 +90,17 @@ class NotifyUser:
 
 
 
+if __name__ == '__main__':
+    msg= {"headers":{
+    "unique_id": "99",
+    "username": "navi",
+    "ticket_num": "123-456",
+    "email": "Navaneetha.k.kannan@oracle.com"},
+    "payload":"test"}
+
+    obj=JsonToTextFileTransformer(msg)
+
+    obj.write_result()
 
 
 

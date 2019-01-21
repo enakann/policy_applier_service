@@ -3,7 +3,7 @@ from utils.yml import YAML
 
 yml=YAML("prod_cons_config.yml","test_pap_pas")
 config=yml.get_config()
-
+print(config)
 
 
 
