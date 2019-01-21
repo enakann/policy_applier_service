@@ -2,8 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 
-class Notify(object):
-
+class Notify:
     def __init__(self, sender, receivers, subject):
         # sender    -> the sender's email address
         # receivers -> list of recipient's email address(es)

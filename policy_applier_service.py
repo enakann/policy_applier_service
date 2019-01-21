@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+from utils.mail import Notify
 class Validator:
     """Verify is the message is already processed or not """
     def __init__(self,header,msg):
@@ -75,18 +76,36 @@ class JsonToTextFileTransformer:
         except Exception as e:
             raise e
 
+    def get_file_path(self):
+        return os.path.join(self.get_path(),self.result_file)
+
+
     def write_result(self):
         self.makedir()
         payload=self.get_payload()
-        filename=os.path.join(self.get_path(),self.result_file)
+        filename=self.get_file_path()
         with open(filename,'w') as file_handler:
             for line in payload:
                 file_handler.write(line)
                 file_handler.write('\n')
 
 
-class NotifyUser:
-    pass
+def process():
+    msg= {"headers":{
+    "unique_id": "99",
+    "username": "navi",
+    "ticket_num": "123-456",
+    "email": "Navaneetha.k.kannan@oracle.com"},
+    "payload":"test"}
+
+    obj=JsonToTextFileTransformer(msg)
+    obj.write_result()
+
+    file_name=obj.get_file_path()
+
+    mail = Alert("navaneetha.k.kannan@oracle.com", ['navaneetha.k.kannan@oracle.com'], "test")
+    body="Applier Result is created in the following path: {}".format(file_name)
+    mail.send_mail("test")
 
 
 
